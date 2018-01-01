@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id = "6843" gpu = "56.0" cpu = "53.8" fan = "3534" timestampStr = "2017-08-03 17:10:24" />
+	<bean id = "6842" gpu = "53.0" cpu = "55.1" fan = "3534" timestampStr = "2017-08-03 17:10:05" />
+	<bean id = "6841" gpu = "52.0" cpu = "55.0" fan = "3534" timestampStr = "2017-08-03 17:06:25" />
+	<bean id = "6840" gpu = "57.0" cpu = "54.8" fan = "3552" timestampStr = "2017-08-03 17:06:04" />
+	<bean id = "6839" gpu = "52.0" cpu = "54.1" fan = "3426" timestampStr = "2017-08-03 17:05:24" />
+	<bean id = "6838" gpu = "52.0" cpu = "54.0" fan = "3341" timestampStr = "2017-08-03 17:05:03" />
+	<bean id = "6837" gpu = "53.0" cpu = "54.0" fan = "3325" timestampStr = "2017-08-03 17:04:24" />
+	<bean id = "6836" gpu = "56.0" cpu = "53.4" fan = "3341" timestampStr = "2017-08-03 17:04:04" />
+	<bean id = "6835" gpu = "52.0" cpu = "53.9" fan = "3534" timestampStr = "2017-08-03 17:03:23" />
+	<bean id = "6834" gpu = "57.0" cpu = "55.0" fan = "3552" timestampStr = "2017-08-03 17:03:19" />
+</beans>

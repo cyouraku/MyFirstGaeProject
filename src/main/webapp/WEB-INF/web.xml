@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app
+        version="2.5"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <!--  <servlet> -->
+ 		<!-- <servlet-name>LoginServlet</servlet-name> -->
+ 		<!-- <servlet-class>com.costuary.LoginServlet</servlet-class> -->
+	<!-- </servlet> -->
+	    <!-- <servlet> -->
+ 		<!-- <servlet-name>LoginOutServlet</servlet-name> -->
+ 		<!-- <servlet-class>>com.costuary.LoginOutServlet</servlet-class> -->
+	<!-- </servlet> -->
+	<servlet>
+ 		<servlet-name>ShowLast10visitors</servlet-name>
+ 		<servlet-class>com.costuary.ShowLast10visitors</servlet-class>
+	</servlet>
+	<servlet>
+ 		<servlet-name>InsertTempOfH515S</servlet-name>
+ 		<servlet-class>com.costuary.InsertTempOfH515S</servlet-class>
+	</servlet>
+	<servlet>
+ 		<servlet-name>ShowLastTenRecords</servlet-name>
+ 		<!-- [get records from XML file] -->
+ 		<servlet-class>com.costuary.ShowLastTenRecordsFrXml</servlet-class>
+ 		<!-- [get records from MySql] -->
+<!--  		<servlet-class>com.costuary.ShowLastTenRecordsOfH515S</servlet-class> -->
+	</servlet>
+	<servlet>
+ 		<servlet-name>GroovyServlet</servlet-name>
+ 		<servlet-class>groovy.servlet.GroovyServlet</servlet-class>
+	</servlet>
+<!-- 	ServerHealthInfoAjaxForXmlBean -->
+	<servlet>
+ 		<servlet-name>ServerHealthInfoAjax</servlet-name>
+ 		<servlet-class>com.servlet.testing.ServerHealthInfoAjaxForXmlBean</servlet-class>
+	</servlet>
+<!-- 	user login servlet -->
+	<servlet>
+    	<servlet-name>UserLogin</servlet-name>
+    	<servlet-class>com.servlet.testing.UserLoginServlet</servlet-class>
+  	</servlet>
+<!-- 	send message servlet -->
+	<servlet>
+    	<servlet-name>SendMsgServlet</servlet-name>
+    	<servlet-class>com.servlet.testing.SendMsgServlet</servlet-class>
+  	</servlet>
+<!-- 	send message Ajax -->
+	<servlet>
+    	<servlet-name>SendMsgAjax</servlet-name>
+    	<servlet-class>com.servlet.testing.SendMsgAjax</servlet-class>
+  	</servlet>
+
+
+	<!-- <servlet-mapping> -->
+        <!-- <servlet-name>LoginServlet</servlet-name> -->
+        <!-- <url-pattern>/LoginServlet</url-pattern> -->
+    <!-- </servlet-mapping> -->
+    <!-- <servlet-mapping> -->
+        <!-- <servlet-name>LoginOutServlet</servlet-name> -->
+        <!-- <url-pattern>/LoginOutServlet</url-pattern> -->
+    <!-- </servlet-mapping> -->
+
+	<servlet-mapping>
+        <servlet-name>ShowLast10visitors</servlet-name>
+        <url-pattern>/ShowLast10visitors</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsertTempOfH515S</servlet-name>
+        <url-pattern>/InsertTempOfH515S</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowLastTenRecords</servlet-name>
+        <url-pattern>/ShowLastTenRecords</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+ 		<servlet-name>GroovyServlet</servlet-name>
+ 		<url-pattern>*.groovy</url-pattern>
+	</servlet-mapping>
+	<!-- 	user login servlet mapping-->
+	<servlet-mapping>
+    	<servlet-name>UserLogin</servlet-name>
+   	 	<url-pattern>/UserLogin</url-pattern>
+  	</servlet-mapping>
+  	<!-- 	get server health info via Ajax servlet mapping-->
+  	<servlet-mapping>
+    	<servlet-name>ServerHealthInfoAjax</servlet-name>
+   	 	<url-pattern>/ServerHealthInfoAjax</url-pattern>
+  	</servlet-mapping>
+  	<!-- 	get message servlet mapping-->
+  	<servlet-mapping>
+    	<servlet-name>SendMsgServlet</servlet-name>
+   	 	<url-pattern>/SendMsgServlet</url-pattern>
+  	</servlet-mapping>
+  	  	<!-- 	get message via Ajax servlet mapping-->
+  	<servlet-mapping>
+    	<servlet-name>SendMsgAjax</servlet-name>
+   	 	<url-pattern>/SendMsgAjax</url-pattern>
+  	</servlet-mapping>
+
+    <welcome-file-list>
+        <!-- <welcome-file>userLogin.html</welcome-file> -->
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+<!-- [START Objectify] -->
+    <filter>
+      <filter-name>ObjectifyFilter</filter-name>
+      <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+      <filter-name>ObjectifyFilter</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+<!--     <listener> -->
+<!--       <listener-class>com.costuary.OfyHelper</listener-class> -->
+<!--     </listener> -->
+<!-- [END Objectify] -->
+</web-app>
